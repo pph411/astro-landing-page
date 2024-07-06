@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import PicsMonroe from "~/assets/m3.jpg";
+import PicsMonroe13 from "~/assets/m13.jpg";
+import PicsMonroe6 from "~/assets/m6.jpg";
+import PicsMonroe8 from "~/assets/m8.jpg";
+import PicsMonroe12 from "~/assets/m12.jpg";
+import PicsMonroe10 from "~/assets/m10.jpg";
+import PicsMonroe17 from "~/assets/m17.jpg";
+---
+
+<style> 
+    .slider {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+    
+    .slider .slide-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+        -webkit-animation: scroll 40s linear infinite;
+        width: calc(320px * 14);
+        white-space: wrap;
+    }
+    
+    .slider .slide {
+    
+        overflow: hidden
+    }
+    
+    .slider .slide img {
+        width: 100%;
+        height: 100%;
+        transition: all 700ms ease-in-out;
+    
+    }
+    .slider .slide img:hover {
+        transform: scale(1.1);
+        opacity: 0.95;
+        cursor: pointer;
+    }
+    
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(calc(200px * 7));
+            transform: translateX(calc(200px * 7));
+        }
+    }
+</style>
+
+<div class="slider">
+    <div class="slide-track">
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe13} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe6} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe8} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+        <Image src={PicsMonroe12} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe10} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe17} alt="" />
+        </div>
+
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe13} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe6} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe8} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+        <Image src={PicsMonroe12} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe10} alt="" />
+        </div>
+        <div class="slide h-[230px] sm:h-[320px]">
+            <Image src={PicsMonroe17} alt="" />
+        </div>
+    </div>
+</div>

@@ -1,30 +1,114 @@
----
-import { Icon } from "astro-icon/components";
-import ContentSection from "~/components/content-section.astro";
----
 
-<ContentSection title="Just ship less" id="intro">
-  <Icon slot="eyebrow" name="logomark" class="size-32" />
-  <Fragment slot="lead">
-    Astro is a new kind of site builder for the
-    <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience.
-  </Fragment>
-  <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
-      href="https://docs.astro.build/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon name="mdi:telescope" class="size-8" />
-      <span>Read the docs</span>
-    </a>
-    <a
-      href="https://astro.new/"
-      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
-    >
-      <Icon name="mdi:rocket" class="size-8" />
-      <span>Try it out</span>
-    </a>
-  </div>
-</ContentSection>
+<style> 
+.slider {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    -webkit-animation: scroll 30s linear infinite;
+    width: calc(250px * 10);
+    white-space: wrap;
+}
+
+.slider .slide {
+
+    overflow: hidden
+}
+
+.slider .slide img {
+    width: 100%;
+    height: 100%;
+    transition: all 700ms ease-in-out;
+
+}
+.slider .slide img:hover {
+    transform: scale(1.1);
+    opacity: 0.95;
+    cursor: pointer;
+}
+div {
+    font-family: "Permanent Marker", cursive;
+}
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-25px * 10));
+        transform: translateX(calc(-25px * 10));
+    }
+}
+  </style>
+
+  <!-- HTML --> 
+<section class="slider bg-green-700">
+        <div class="slide-track border-y-1 align-middle [&>div]:h-fit [&>div]:p-2 [&>div]:text-xl bg-blue-500 border-slate-50">
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            <div class="slide">
+                $RUDY
+            </div>
+            
+</div>

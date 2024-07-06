@@ -1,0 +1,37 @@
+---
+import VideoMonroe from "~/assets/rudyvid1.mp4";
+
+---
+
+<!--
+    <video
+        slot="background"
+        class="object-cover h-200% w-screen border-4"
+        autoplay
+        loop
+        muted
+        src="/src/assets/rudyvid01.mp4">
+    
+    </video>
+-->
+
+<style>
+    .video-text-container {
+    position: relative;
+    
+}
+
+
+</style>
+<div class="video-text-container w-screen border-y-4 border-slate-900">
+    
+    <video
+        slot="background"
+        class="object-cover h-180% sm:h-220% lg:h-screen w-screen"
+        autoplay
+        loop
+        muted
+        src={VideoMonroe}>
+    </video>
+    <p id="text-overlay" class="w-auto text-center bg-black text-lg lg:text-2xl font-bold text- py-5 px-10 shadow-md opacity-60">3D RUDY DESIGN</p>
+</div>

@@ -1,66 +1,107 @@
 ---
-import { Icon } from "astro-icon/components";
-import ContentSection from "~/components/content-section.astro";
-import type { FeatureItem } from "~/types";
+import { Image } from "astro:assets";
+import rud2Image from "~/assets/rud-2.png";
 
-const features: Array<FeatureItem> = [
-  {
-    title: "Bring Your Own Framework",
-    description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "mdi:handshake",
-  },
-  {
-    title: "100% Static HTML, No JS",
-    description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "mdi:feather",
-  },
-  {
-    title: "On-Demand Components",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.",
-    icon: "mdi:directions-fork",
-  },
-  {
-    title: "Broad Integration",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
-    icon: "mdi:graph",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.",
-    icon: "mdi:search-web",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "mdi:account-group",
-  },
-];
+const widths = [250, 500];
+const sizes = "(min-width: 250px) 36vw, 56vw";
 ---
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  h3, a, article {
+  font-family: "Permanent Marker", cursive;
+}
+  p {
+    
+    font-family: "Permanent Marker", cursive;
+    font-size: 12px;
+  }
+</style>
 
-<ContentSection title="Features" id="features">
-  <Fragment slot="lead">
-    Astro comes <span class="text-primary">batteries included</span>. It takes
-    the best parts of
-    <span class="text-primary">state-of-the-art</span>
-    tools and adds its own <span class="text-primary">innovations</span>.
-  </Fragment>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    {
-      features.map(({ title, description, icon }) => (
-        <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
-          <div class="size-16 rounded-full border-2 border-current p-3">
-            <Icon name={icon} class="size-full" />
-          </div>
-          <p class="text-center font-extrabold text-xl">{title}</p>
-          <p class="text-center text-offset text-sm">{description}</p>
-        </li>
-      ))
-    }
-  </ul>
-</ContentSection>
+
+<section
+  class="flex flex-col h-max md:h-screen items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500"
+>
+<div class="w-full h-20 lg:h-10">
+
+</div>
+<article class="w-full h-40 p-2 text-center text-base md:text-lg text-slate-200 font-bold sm:mb-10 md:mb-12">
+  <h3 class="flex justify-center text-4xl md:text-6xl font-bold p-6 md:mb-5">
+    HOW TO BUY
+  </h3>
+  Buying RUDY step by step for dummies:
+</article>
+  <div class="lg:w-full lg:h-10">
+
+  </div>
+
+
+  <div class="xl:w-8/12 grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 gap-4 w-11/12 md:[&>div]:w-full md:[&>div]:h-full [&>div]:mb-3 [&>div]:p-4 [&>div]:shadow-md [&>div]:shadow-slate-600 [&>div>p]:text-gray-300 [&>div>p]:text-xs [&>div>a]:text-xs sm:[&>div>p]:text-base sm:[&>div>a]:text-base sm:[&>div>h4]:text-lg [&>div>h4]:text-base lg:[&>div>h4]:text-base lg:[&>div>p]:text-sm lg:[&>div>a]:text-sm [&>div>a]:text-gray-300 [&>div]:bg-stone-900 [&>div>p]:flex [&>div]:flex-col [&>div]:justify-center [&>div]:align-middle [&>div]:py-10 [&>div]:m-auto [&>div>h4]:text-white [&>div>h4]:font-bold [&>div>p]:p-3 [&>div>a]:p-3 md:mb-20 lg:gap-6">
+    
+    <div class="flex flex-grow mt-10">
+      <h4>
+        1. Create a phantom wallet.
+      </h4>
+      
+      <a href="https://phantom.app" target="_blank" rel="noopener noreferrer" class="w-full h-full flex items-center justify-center gap-3 px-6 py-4 hover:shadow-xl hover:delay-150 hover:duration-300 cursor-pointer">
+        Go to phantom.app and follow the simple steps to create a new account with the phantom app or browser extension.
+      </a>
+    </div>
+
+    <div class="flex flex-grow">
+      <h4>
+        2. Get some $SOL.
+      </h4>
+      <p class="w-full h-full flex items-center justify-center gap-3 px-6 py-4 hover:shadow-xl hover:delay-150 hover:duration-300">
+        Tap the buy button in the app to purchase SOL, or deposit $SOL to your phantom wallet from the crypto exchange of your choice.
+      </p>
+    </div>
+
+    <div class="flex flex-grow">
+      <h4>
+        3. Swap BNB for RUDY.
+      </h4>
+      <p class="w-full h-full flex items-center justify-center gap-3 px-6 py-4 hover:shadow-xl hover:delay-150 hover:duration-300">
+        Tap the swap icon in yout phantom wallet and paste the $Rudy token address. Swap your BNB for RUDY.
+      </p>
+    </div>
+    
+    <div class="flex flex-grow">
+      <h4>
+        4. You are now a $RUDY holder.
+      </h4>
+      <p class="w-full h-full flex items-center justify-center gap-3 px-6 py-4 hover:shadow-xl hover:delay-150 hover:duration-300">
+        Welcome, as a holder join us in our socials involve to succeed to choose the color of your lambo.
+      </p>
+    </div>
+    
+  </div>
+  <div class="w-full h-10"></div>
+  
+  <a href="https://www.youtube.com/watch?v=CoyvAyxX0aw" target="_blank" rel="noopener noreferrer">
+    <button  class="hidden lg:block w-44 sm:w-48 md:w-fit lg:w-fit h-max sm:h-max lg:h-max p-5 text-white font-bold transition duration-500 ease-in-out transform hover:-translate-x-1 hover:scale-110 mt-20 lg:mt-28">
+    Install phantom tutorial
+    </button>
+  </a>
+    
+  <div
+      id="logo"
+      class="md:hidden w-4/5 h-6/12 self-center mx-auto shadow-lg mb-0 pb-0 mt-5"
+    >
+      <Image
+        class="object-cover"
+        src={rud2Image}
+        widths={widths}
+        sizes={sizes}
+        loading="eager"
+        alt="$RUDY"
+      />
+  </div>
+
+
+</section>
+
+
+

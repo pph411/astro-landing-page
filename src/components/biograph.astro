@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import rud2Image from "~/assets/rud-2.png";
+
+
+const widths = [200, 400];
+const sizes = "(min-width: 200px) 36vw, 56vw";
+---
+<style>
+p {
+    font-size: 12px;
+}
+</style>
+
+
+<section
+    class="max-h-max flex flex-col w-full justify-center align-middle bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto"
+>   
+<div class="w-full h-20">
+</div>
+    <!--
+        <article class="w-4/5 lg:w-5/12 mx-auto text-center text-base md:text-lg font-bold my-10">
+            <h3 class="flex justify-center text-4xl font-bold mt-6 pb-6">
+                Tokenomics
+            </h3>
+                RUDY is a tought mf who eat dips as a breakfest as the chad degen he is buying every dip and holding as an animal.
+        </article>
+    -->
+    <article class="w-6/12 lg:w-5/12 mx-auto text-center text-base md:text-lg text-slate-200 font-bold sm:mb-12 md:mb-12">
+        <h3 class="flex justify-center text-4xl md:text-6xl font-bold p-6 md:mb-5">
+            TOKENOMICS
+        </h3>
+        
+        RUDY is a tought mf who eat dips as a breakfest as the chad degen he is buying every dip and holding as an animal.
+    </article>
+
+        <div class="w-9/12 lg:grid lg:grid-cols-2 lg:grid-rows-1 self-center place-items-center place-content-center mx-auto">
+            <div
+                id="logo"
+                class="w-6/6 lg:w-11/12 self-center rounded-md mt-5 mb-10 lg:mb-0 mx-auto"
+            >
+                <Image
+                class="object-contain"
+                src={rud2Image}
+                widths={widths}
+                sizes={sizes}
+                loading="eager"
+                alt="$RUDY"
+                />
+            </div>
+    
+            <div class="grid grid-cols-1 grid-rows-2 w-12/12 sm:w-10/12 md:w-9/12 lg:w-full h-54 self-center [&>div]:h-24 [&>div>p]:text-gray-300 [&>div>p]:text-xs [&>div>p>span]:text-base [&>div>a]:text-gray-300 [&>div>a]:text-xs [&>div>a>span]:text-base [&>div]:bg-gray-900 [&>div]:shadow-lg [&>div>p]:flex [&>div>p]:flex-col [&>div>p>span]:text-white [&>div>p>span]:font-bold [&>div>a]:flex [&>div>a]:flex-col [&>div>a>span]:text-white [&>div>a>span]:font-bold mx-auto">
+                
+                <a href="https://dexscreener.com/" target="_blank" rel="noopener noreferrer" class="hidden lg:block w-auto h-16 justify-self-center bg-gradient-to-r from-cyan-500 to-blue-500 rounded-md text-xl border-2 border-black shadow-md text-white font-bold transition duration-500 ease-in-out hover:bg-slate-600 transform hover:-translate-y-1 hover:scale-110 hover:rotate-0 hover:rounded-md mx-auto p-3 mt-2 mb-2">
+                    BUY RUDY HERE 
+                </a>
+
+                <div class="flex flex-grow mb-5 rounded-sm">
+                    <p class="w-full flex items-center justify-center px-6 hover:shadow-xl hover:delay-150 hover:duration-300">
+                        <span>TOTAL SUPPLY</span> TBA $RUDY.
+                    </p>
+                </div>
+                <div class="flex flex-grow rounded-sm">
+                    <p class="w-full flex items-center justify-center px-6 hover:shadow-xl hover:delay-150 hover:duration-300">
+                        <span>TOKEN ADDRESS</span> TBA.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        <a href="https://dexscreener.com/" target="_blank" rel="noopener noreferrer" class="lg:hidden w-auto h-16 justify-self-center bg-gradient-to-t from-gray-700 via-gray-900 to-black rounded-md text-xl text-white font-bold -rotate-12 transition duration-500 ease-in-out hover:bg-slate-600 transform hover:-translate-y-1 hover:scale-110 hover:rotate-0 hover:rounded-md mx-auto p-3 mt-20 mb-28">
+            BUY RUDY HERE 
+        </a>
+        
+
+
+</section>
+
+
+

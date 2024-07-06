@@ -1,49 +1,83 @@
 ---
 import { Icon } from "astro-icon/components";
-import HeroImage from "~/components/hero-image.astro";
+import { Image } from "astro:assets";
+import rud2Image from "~/assets/rud-2.png";
 import type { FooterLink } from "~/types";
 
 const links: Array<FooterLink> = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
-    icon: "mdi:home",
+    url: "https://web.telegram.org/a/#-1002224984232",
+    description: "$MONROE Telegram",
+    icon: "fa-brands:telegram",
   },
   {
-    url: "https://github.com/mhyfritz/astro-landing-page",
-    description: "View source on GitHub",
-    icon: "fa-brands:github-alt",
-  },
-  {
-    url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
+    url: "https://x.com/MonroeonSol",
+    description: "$MONROE on Sol on Twitter",
     icon: "fa-brands:twitter",
   },
 ];
+
+const widths = [200, 300];
+const sizes = "(min-width: 200px) 24vw, 40vw";
 ---
 
-<footer class="relative flex h-64 items-center justify-center">
-  <div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
+<footer class="relative flex flex-col w-screen h-auto lg:h-screen items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
+  
+  <div class="lg:w-full lg:h-full z-10">
+      <article class="w-full h-40 p-2 text-center text-lg md:text-xl lg:text-2xl text-slate-200 font-bold md:mt-36 sm:mb-12 md:mb-12 lg:mb-20">
+        <h3 class="flex justify-center text-5xl md:text-6xl lg:text-7xl font-bold p-6 md:mb-5 lg:mb-0">
+          SOCIALS:
+        </h3>
+        Join our community
+      </article>
+      <div class="grid grid-cols-1 grid-rows-2 gap-0 place-items-center w-full h-40 lg:mt-10 z-10">
+        
+        <ul class="relative grid grid-cols-3 gap-x-8 [&>li>a]:rounded-sm [&>li>a]:size-16 lg:[&>li>a]:size-20">
+          <li>
+            <a
+            class="flex items-center justify-center border-current p-3 bg-gradient-to-b from-gray-700 via-gray-900 to-black -rotate-6 transition duration-500 ease-in-out hover:bg-slate-600 transform hover:-translate-y-1 hover:scale-110 hover:rotate-0"
+            href="#" target="_blank" rel="noopener noreferrer"
+                >
+                <span class="sr-only">Description</span>
+                <Icon class="size-full text-white" name={"fa-brands:twitter"} />
+              </a>
+            </li>
+            <li>
+              <a
+            class="flex items-center justify-center border-current p-3 bg-gradient-to-b from-gray-700 via-gray-900 to-black rotate-3 transition duration-500 ease-in-out hover:bg-slate-600 transform hover:-translate-y-1 hover:scale-110 hover:rotate-0"
+            href="#" target="_blank" rel="noopener noreferrer"
+            >
+            <span class="sr-only">Description</span>
+            <Icon class="size-full text-white" name={"fa-brands:telegram"} />
+              </a>
+          </li>
+          <li>
+            <a
+            class="flex items-center justify-center border-current p-3 bg-gradient-to-b from-gray-700 via-gray-900 to-black -rotate-6 transition duration-500 ease-in-out hover:bg-slate-600 transform hover:-translate-y-1 hover:scale-110 hover:rotate-0"
+            href="#" target="_blank" rel="noopener noreferrer"
+            >
+            <span class="sr-only">Description</span>
+            <Icon class="size-full text-white" name={"fa-brands:instagram"} />
+            </a>
+          </li>
+        </ul>
+        <button class="w-52 sm:w-56 md:w-60 lg:w-72 h-max sm:h-max lg:h-max p-5 bg-gradient-to-t from-gray-700 via-gray-900 to-black text-xl text-white font-bold -rotate-3 transition duration-500 ease-in-out hover:bg-slate-600 transform hover:-translate-x-1 hover:scale-110 hover:rotate-0 mt-20 lg:mt-28">
+          APE IN NOW
+        </button>
+      </div>
   </div>
-  <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
-    {
-      links.map((link) => (
-        <li>
-          <a
-            class="flex size-16 items-center justify-center rounded-full border-2 border-current p-4"
-            href={link.url}
-          >
-            <span class="sr-only">{link.description}</span>
-            <Icon class="size-full" name={link.icon} />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  
+  <div
+      id="logo"
+      class="lg:absolute lg:bottom-0 lg:left-0 w-3/5 h-6/12 lg:w-4/12 lg:h-4/12 self-center mt-24 lg:mb-0 z-0"
+    >
+      <Image
+        class="object-contain"
+        src={rud2Image}
+        widths={widths}
+        sizes={sizes}
+        loading="eager"
+        alt="$RUDY"
+      />
+  </div>
 </footer>

@@ -1,32 +1,35 @@
 ---
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import pumpfunImage from "~/assets/pill.png";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
-];
+  { title: "Buy now", url: "https://jup.ag/swap/SOL-FFoEvwrMh8oX9WKZ2CSoJ5ZM4iTZEpe5ivZA3j79VvP9" },
+  { title: "Chart", url: "https://dexscreener.com/solana/8y1txyrhsabxcmnxwmmgusomttkjklqfuktfv8h3ax39" },
+  { title: "Twitter", url: "https://x.com/MonroeonSol" },
+  { title: "Telegram", url: "https://web.telegram.org/a/#-1002224984232" }
+]
+const widths = [60, 100];
+const sizes = "(min-width: 40px) 60px, 80px";
 ---
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+  class="absolute top-0 md:bottom-0 z-10 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="size-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+    
   </a>
   <div>
     <div class="flex items-center gap-6">
-      <nav class="hidden sm:block">
+      <nav class="hidden">
         <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
               <li>
-                <a class="text-sm" href={url}>
+                <a class="text-m" href={url} target="_blank" rel="noopener noreferrer">
                   {title}
                 </a>
               </li>
@@ -57,15 +60,13 @@ const navItems: Array<NavItem> = [
               <Icon name="mdi:close" class="size-8" />
             </button>
           </header>
-          <div class="flex justify-center">
-            <Icon name="logomark" class="size-16" />
-          </div>
+          
           <nav>
             <ul class="flex flex-col">
               {
                 navItems.map(({ title, url }) => (
                   <li>
-                    <a class="block py-4 text-center text-xl" href={url}>
+                    <a class="block py-4 text-center text-xl" href={url} target="_blank" rel="noopener noreferrer">
                       {title}
                     </a>
                   </li>
@@ -73,6 +74,7 @@ const navItems: Array<NavItem> = [
               }
             </ul>
           </nav>
+          
         </div>
       </div>
     </div>
